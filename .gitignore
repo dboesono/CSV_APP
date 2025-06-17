@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual env
+.venv/
+
+# Streamlit config (optional—you may want to keep it)
+# .streamlit/
+
+# Mac/Linux swap files
+# *~

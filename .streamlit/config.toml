@@ -1,0 +1,7 @@
+[theme]
+base="dark"
+primaryColor="#1f77b4"            # your accent
+backgroundColor="#0E1117"         # main background
+secondaryBackgroundColor="#262730" # sidebar background
+textColor="#FFFFFF"               # text
+font="sans serif"
