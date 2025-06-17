@@ -34,6 +34,32 @@ A Streamlit application for cleaning and previewing **Device** and **Alarm** CSV
    pip install -r requirements.txt
    ```
 
-4. Go to this Google Drive [Link](https://drive.google.com/file/d/1FzyPuMeQJ6n217feIUJZTHglPtDGM9FT/view?usp=drivesdk) to download the `run_app.bat` file for you to place it at the desktop
+4. **Creating a Launcher:** Go to notepad and copy paste the below code to the empty notepad:
+   ```bat
+   @echo off
+   REM ── Set this to wherever you extracted the CSV_APP folder ──
+   set "APP_DIR=%USERPROFILE%\Desktop\CSV_APP-main"
 
-4. Once installation is completed. Double-click the `run_app.bat` file to run the app.
+   REM ── Switch to that directory ──
+   cd /d "%APP_DIR%"
+
+   REM ── Launch the Streamlit app ──
+   streamlit run app.py
+
+   pause
+   ```
+
+   Save it as `run_app.bat` file and save it to the desktop. The placement of the files should look like the following:
+
+   ```text
+   Desktop/
+   ├── CSV_APP-main/
+   │   ├── .streamlit/
+   │   │   └── config.toml
+   │   ├── assets/
+   │   ├── app.py
+   │   ├── requirements.txt
+   │   └── README.md
+   └── run_app.bat
+
+4. Once completed. Double-click the `run_app.bat` file to run the app.
