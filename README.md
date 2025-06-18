@@ -33,6 +33,10 @@ A Streamlit application for cleaning and previewing **Device** and **Alarm** CSV
    ```bash
    pip install -r requirements.txt
    ```
+   if the above does not work, use the following command line instead:
+   ```bash
+   py -m pip install -r requirements.txt
+   ```
 
 4. **Creating a Launcher:** Go to notepad and copy paste the below code to the empty notepad:
    ```bat
@@ -45,6 +49,21 @@ A Streamlit application for cleaning and previewing **Device** and **Alarm** CSV
 
    REM ── Launch the Streamlit app ──
    streamlit run app.py
+
+   pause
+   ```
+
+   if the above `.bat` file does not work, use the following code instead:
+   ```bat
+   @echo off
+   REM ── Set this to wherever you extracted the CSV_APP folder ──
+   set "APP_DIR=%USERPROFILE%\Desktop\CSV_APP-main"
+
+   REM ── Switch to that directory ──
+   cd /d "%APP_DIR%"
+
+   REM ── Launch the Streamlit app ──
+   py -m streamlit run app.py
 
    pause
    ```
