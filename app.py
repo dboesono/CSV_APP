@@ -60,7 +60,7 @@ def clean_device_df(raw: pd.DataFrame) -> pd.DataFrame:
     for c in df.columns:
         if 'time' in c.lower():
             df[c] = (pd.to_datetime(df[c], errors='coerce')
-                         .dt.strftime('%Y/%d/%m %H:%M:%S'))
+                         .dt.strftime('%Y/%m/%d %H:%M:%S'))
     return df
 
 
@@ -139,7 +139,7 @@ with col2:
 - Drop merged 1st row, use 2nd as headers  
 - Remove memory-usage columns  
 - Deduplicate headers `(_0, _1, _2, …)  
-- Reformat `time` columns to `YYYY/DD/MM HH:MM:SS` 
+- Reformat `time` columns to `YYYY/MM/DD HH:MM:SS` 
 - Preview 100 rows; ← → to navigate
 - `.csv` file ready to download   
             """)
